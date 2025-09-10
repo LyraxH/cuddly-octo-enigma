@@ -1,0 +1,22 @@
+* { font-family: "otf"; }   
+
+#waybar {
+  border-radius: 12px; 
+  font-size: 22px;
+  background-color: rgba(56,51,102,0.5);
+  color: white;
+}
+
+.modules-left {
+  padding-left: 22px;
+  border-radius: 12px;
+}
+.modules-right {
+  padding-right: 22px;
+  border-radius: 12px;
+}
+
+/** battery states */
+#battery.critical { color: #c23b22; }
+#battery.warning { color: #fdfd96; }
+#battery.charging{ color: #b2fba5; }
