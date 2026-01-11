@@ -1,81 +1,72 @@
-
 [
     {
         "position": "top",
         "mode": "dock",
         "gtk-layer-shell": "true",
-        "height": 42.0,
-
         "modules-left": [
             "cpu",
             "memory",
             "network",
-            "power-profiles-daemon",
             "hyprland/workspaces"
         ],
-
         "modules-center": [
+            "clock#date"
         ],
-
         "modules-right": [
             "backlight",
             "pulseaudio",
             "clock#time",
-            "clock#date",
+            "power-profiles-daemon",
             "battery"
         ],
-        
         /***************************/
         /*  M O D U L E S  T O P   */
         /***************************/
-        "cpu":{
-            "format": "[ CPU: {usage}% ] ", // | LOAD: {load} |
+        "cpu": {
+            "format": "[ {usage}%]" // | LOAD: {load} |
         },
-        "memory":{
-            "format": "[ RAM: {percentage}% ] " // SWAP: {swapPercentage}
+        "memory": {
+            "format": "[ {percentage}%]" // SWAP: {swapPercentage}
         },
-        "disk":{
-            "format": "[ {used} of {total} ]",
+        "disk": {
+            "format": "[{used} of {total}]"
         },
-        "hyprland/workspaces":{
+        "hyprland/workspaces": {
             "format": "[{}]"
         },
-        "backlight":{
-            "format": "[ {percent}% ] "
+        "backlight": {
+            "format": "[󰃞 {percent}%]"
         },
-        "pulseaudio":{
-            "format": "[ {volume}% ] ",
-            "format-muted": "[ MUTED ] "//"[ : {volume}% ]"
+        "pulseaudio": {
+            "format": "[{volume}%]",
+            "format-muted": "[MUTED]" //"[ : {volume}% ]"
         },
-        "clock#date":{
-            "format": "[ {:%d-%m-%Y} ] "
+        "clock#date": {
+            "format": "[{:%d-%m-%Y}]"
         },
-        "clock#time":{
-            "format":"[ {:%H:%M} ] ",
-            "interval": 55
+        "clock#time": {
+            "format": "[{:%H:%M}]",
+            "interval": 59
         },
-        "battery":{
-            "format": "[ {capacity}% ]", // {health} | {}
-            "format-alt": "[ {time} ]",
+        "battery": {
+            "format": "[{capacity}%]", // {health} | {}
+            "format-alt": "[{time}]",
             "states": {
                 "critical": 15,
                 "warning": 30
             }
         },
-        "network":{
-            "format-down": "[ disconnected ]",
-            "format": "[ {signalStrength} | {frequency} GHz ]",
+        "network": {
+            "format-down": "[disconnected]",
+            "format": "[{signalStrength}|{frequency} GHz]",
             "format-alt": "[ wlan0: {ipaddr} | {netmask} | {gwaddr} ]"
         },
         "power-profiles-daemon": {
             "format": "{icon}",
-            "tooltip-format": "Power profile: {profile}nDriver: {driver}",
-            "tooltip": true,
             "format-icons": {
-                "default": " [ def ] ",
-                "performance": " [ per ] ",
-                "balanced": " [ bal ] ",
-                "power-saver": " [ sav ] "
+                "performance": "[ 󰆷 ]",
+                "balanced": "[  ]",
+                "power-saver": "[ 󱤅 ]"
             }
         }
     }
