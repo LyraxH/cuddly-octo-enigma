@@ -17,7 +17,8 @@ window {
     border-color: @accent;
     border-radius: 12px;
     width: 30%;
-    background-image: url("~/Pictures/New Folder/ok.png", width);
+    /* background-image: url("~/Pictures/wallpapers/winterWonderZeri.jpg", height); */
+    background-image: url("~/Downloads/wp.jpg", height);
     transparency: "real";
     background-color: transparent;
 }
@@ -38,7 +39,7 @@ prompt {
 listview {
     lines: 8;
     columns: 1;
-    fixed-height: false;
+    fixed-height: true;
 }
 
 element {
@@ -47,7 +48,7 @@ element {
 }
 
 element selected {
-    background-color: @accent;
+    background-color: rgba(249,168,212,0.42);
     text-color: #1a1b26;
 }
 
