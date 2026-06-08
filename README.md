@@ -2,9 +2,12 @@
 ### i guess
 
 ## home
-yukari is bae
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/a538edbb-9429-42c9-86b5-1abff8131b19" />
-i swear i like p5 more tho
+<img width="2880" height="1800" alt="home1" src="https://github.com/user-attachments/assets/998b1964-816a-450f-95f0-6356b1591ca4" />
+yukari is still bae
+<img width="2880" height="1800" alt="home2" src="https://github.com/user-attachments/assets/0062bc13-f809-4538-afc4-4dc75515e25b" />
+<img width="2880" height="1784" alt="home3" src="https://github.com/user-attachments/assets/cb67166f-d4a1-40bd-90dd-0c9fd06f5384" />
+
+p6 hype
 
 ## hyprlock
 <img width="2880" height="1800" alt="hyprlock1" src="https://github.com/user-attachments/assets/351fcbff-e8f5-46a0-99a8-c0bab209026d" />
