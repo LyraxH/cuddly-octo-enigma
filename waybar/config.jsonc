@@ -5,6 +5,7 @@
         "height": 36,
         "gtk-layer-shell": true,
         "modules-left": ["cpu", "memory", "network", "hyprland/workspaces"],
+        "modules-center":["hyprland/window"],
         "modules-right": ["backlight", "pulseaudio", "clock#time", "clock#date", "power-profiles-daemon", "battery"],
 
         "cpu": {
@@ -21,6 +22,9 @@
                 "active": "󰄛",
                 "default": "󰄜"
             }
+        },
+        "hyprland/window": {
+            "format": "{}"
         },
         "backlight": {
             "format": "󰃞 {percent}%"
