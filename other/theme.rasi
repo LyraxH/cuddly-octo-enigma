@@ -17,8 +17,7 @@ window {
     border-color: @accent;
     border-radius: 12px;
     width: 30%;
-    /* background-image: url("~/Pictures/wallpapers/winterWonderZeri.jpg", height); */
-    background-image: url("~/Downloads/wp.jpg", height);
+    background-image: url("/home/hinarch/Pictures/wallpapers/hdjingliu.png", height);
     transparency: "real";
     background-color: transparent;
 }
