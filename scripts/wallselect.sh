@@ -42,15 +42,6 @@ THEMES=( # "Name|Wallpaper_Path|Hex_Accent1|Hex_Accent2|Hex_Bg|Hex_Accent3"
     "Pro Blue|$HOME/Pictures/wallpapers/samsungWallpapers/8.png|#689ea0|#285495|#000217|#09334b|"
     "Pro Orange|$HOME/Pictures/wallpapers/samsungWallpapers/9.jpg|#d56c18|#191e54|#000000|#294684|"
     "Pro Yellow|$HOME/Pictures/wallpapers/samsungWallpapers/10.png|#c28b16|#0d4345|#000000|#16534e|"
-    "Your Name 1|$HOME/Pictures/wallpapers/NiMe/your name 1.jpg|#85c1e9|#af7ac5|#0c0f12|#ec7063|"
-    "Your Name 2|$HOME/Pictures/wallpapers/NiMe/your name 2.jpg|#3498db|#bb8fce|#050811|#f5b041|"
-    "Your Name 3|$HOME/Pictures/wallpapers/NiMe/your name 3.jpg|#eb984e|#5dade2|#18161b|#f4d03f|"
-    "Your Name 4|$HOME/Pictures/wallpapers/NiMe/your name 4.jpg|#5dade2|#df73ff|#0a0b10|#f39c12|"
-    "Weathering With You 1|$HOME/Pictures/wallpapers/NiMe/weathering with you 1.jpg|#5dade2|#ec7063|#111625|#f4d03f|"
-    "Weathering With You 2|$HOME/Pictures/wallpapers/NiMe/weathering with you 2.jpg|#5dade2|#abebc6|#0e1726|#f7dc6f|"
-    "Suzume 1|$HOME/Pictures/wallpapers/NiMe/suzume1.jpg|#c97be6|#3fa9f5|#0d131a|#f9eb6c|"
-    "Suzume 2|$HOME/Pictures/wallpapers/NiMe/suzume2.jpg|#4da6ff|#8cd9b3|#0f1a24|#e6af67|"
-    "Suzume 3|$HOME/Pictures/wallpapers/NiMe/suzume3.jpg|#5dade2|#ec7063|#111625|#f4d03f|"
 )
 
 if [ -n "$1" ]; then
