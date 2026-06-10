@@ -122,7 +122,6 @@ if [ -f "$STARSHIP_CONF" ]; then
 fi
 
 if [ -f "$KITTY_CONF" ]; then
-    sed -i "s/^background_opacity.*/background_opacity 0.2/" "$KITTY_CONF"
     sed -i "s/^background\s.*/background $BG_COLOR/" "$KITTY_CONF"
 fi
 kill -SIGUSR1 $(pgrep kitty)
