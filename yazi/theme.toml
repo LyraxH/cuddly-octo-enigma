@@ -1,25 +1,126 @@
 # ~/.config/yazi/theme.toml
 
-[manager]
-border_symbol = "│"
-border_style  = { fg = "#a6e3e9" } # Lavender borders
+# ==========================================
+# Dynamic Palette Targets
+# ==========================================
+# These will be dynamically rewritten by your wallselect.sh script.
+# Accent1: Selection, primary highlights, active badges
+# Accent2: Paths, borders, metadata highlights
+# Accent3: Secondary actions, warnings/git or subtle contrasts
+# BgColor: Main panel background
 
+[flavor]
+use = ""
+
+[manager]
+# Borders and Panes
+border_style = { fg = "#000000" } # Yazi_Accent2
+
+# Line numbers and titles
+line_number_style = { fg = "#000000" } # Yazi_Bg
+current_line_number_style = { fg = "#000000", bold = true } # Yazi_Accent1
+
+# Folder Preview and Content matching
+cwd = { fg = "#000000", bold = true } # Yazi_Accent2
+
+# Hovered / Selected items
+hovered       = { fg = "#11131c", bg = "#4bc5ff" } # Yazi_Hovered
+preview_hover = { fg = "#11131c", bg = "#4bc5ff" } # Yazi_Hovered
+
+# Status Bar Styling
 [status]
 separator_open  = ""
 separator_close = ""
-separator_style = { fg = "#313244", bg = "#313244" }
+separator_style = { fg = "#000000", bg = "#000000" } # Yazi_Bg
 
-[selection]
-style = { fg = "#101216", bg = "#c5a880", bold = true } # Selection Tag
+# Left mode block (Normal / Select / Visual mode badges)
+mode_normal = { fg = "#11131c", bg = "#4bc5ff", bold = true } # Yazi_Status_Normal
+mode_select = { fg = "#11131c", bg = "#e1c28f", bold = true } # Yazi_Status_Select
+mode_unset  = { fg = "#11131c", bg = "#2956ab", bold = true } # Yazi_Status_Unset
 
-[hover]
-style = { bg = "#a6e3e9", fg = "#101216" } # Hover Tag
+# Right blocks (Progress, Permissions, Position indicators)
+permissions = { fg = "#000000" } # Yazi_Accent2
+position    = { fg = "#11131c", bg = "#4bc5ff" } # Yazi_Status_Position
 
-# Controls the color of the filename text strings
+# Input/Confirmation Dialog Prompts
+[input]
+border   = { fg = "#000000" } # Yazi_Accent2
+title    = { fg = "#000000" } # Yazi_Accent2
+value    = { fg = "#000000" } # Yazi_Accent1
+selected = { bg = "#2956ab" } # Yazi_Accent3
+
+# Select components (Dropdowns / Context actions)
+[select]
+border   = { fg = "#000000" } # Yazi_Accent2
+active   = { fg = "#000000", bold = true } # Yazi_Accent1
+inactive = { }
+
+# File Pickers
+[picker]
+border   = { fg = "#000000" } # Yazi_Accent2
+active   = { fg = "#000000", bold = true } # Yazi_Accent1
+inactive = { }
+
+# Completion Menu (Tab-completing paths or commands)
+[completion]
+border   = { fg = "#000000" } # Yazi_Accent2
+active   = { fg = "#000000", bg = "#2956ab" } # Yazi_Accent1
+inactive = { }
+
+# Tasks Panel (File Operations Progress)
+[tasks]
+border  = { fg = "#000000" } # Yazi_Accent2
+title   = { fg = "#000000" } # Yazi_Accent2
+hovered = { fg = "#000000", underline = true } # Yazi_Accent1
+
+# Dynamic Git Component Highlighting
+[git]
+status_added    = { fg = "#000000" } # Yazi_Accent2
+status_modified = { fg = "#2956ab" } # Yazi_Accent3
+status_deleted  = { fg = "#2956ab" } # Yazi_Accent3
+status_renamed  = { fg = "#000000" } # Yazi_Accent2
+status_untracked= { fg = "#2956ab" } # Yazi_Accent3
+
+# Standard File Type Overrides (Optional fallback highlights)
 [filetype]
 rules = [
-    { mime = "image/*", fg = "#a6e3e9" }, # Text Image Tag
-    { mime = "video/*", fg = "#c5a880" }, # Text Video Tag
-    { mime = "audio/*", fg = "#4b6584" }, # Text Audio Tag
-    { url = "*.zip",    fg = "#c5a880" }, # Text Zip Tag
+	{ mime = "image/*", fg = "#000000" }, # Yazi_Accent2
+	{ mime = "video/*", fg = "#2956ab" }, # Yazi_Accent3
+	{ mime = "audio/*", fg = "#2956ab" }, # Yazi_Accent3
+	{ mime = "application/x-tar", fg = "#000000" }, # Yazi_Accent1
+	{ mime = "application/x-bzip2", fg = "#000000" }, # Yazi_Accent1
+	{ mime = "application/gzip", fg = "#000000" }, # Yazi_Accent1
+	{ mime = "application/zip", fg = "#000000" }, # Yazi_Accent1
+	{ mime = "application/x-7z-compressed", fg = "#000000" }, # Yazi_Accent1
+	{ url = "*", fg = "#000000" } # Yazi_Accent1
+]
+
+# ==========================================
+# Dynamic Icon Overrides
+# ==========================================
+
+[icon]
+prepend_rules = [
+    # 1. Catch ALL standard closed and open folders by directory property
+    { is = "folder", fg = "#000000" }, # Yazi_Accent1
+
+    # 2. Force specific XDG / Custom directory names shown in your list
+    { name = "Downloads", fg = "#000000" }, # Yazi_Accent1
+    { name = "Documents", fg = "#000000" }, # Yazi_Accent1
+    { name = "Desktop",   fg = "#000000" }, # Yazi_Accent1
+    { name = "Pictures",  fg = "#000000" }, # Yazi_Accent1
+    { name = "Music",     fg = "#000000" }, # Yazi_Accent1
+    { name = "Videos",    fg = "#000000" }, # Yazi_Accent1
+    { name = "GitHub",    fg = "#000000" }, # Yazi_Accent1
+    { name = "Android",   fg = "#000000" }, # Yazi_Accent1
+
+    # 3. Explicit fallback for the common folder glyphs just in case
+    { glyph = "", fg = "#000000" }, # Yazi_Accent1
+    { glyph = "", fg = "#000000" }, # Yazi_Accent1
+    { glyph = "", fg = "#000000" }  # Yazi_Accent1
+]
+
+append_rules = [
+    # Fallback color for files
+    { name = "*", fg = "#000000" } # Yazi_Accent2
 ]
